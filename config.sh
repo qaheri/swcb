@@ -18,4 +18,3 @@ if [ $choice2 == "1" ]; then
 elif [ $choice2 == "2" ]; then
     bash /root/axelbot/config2.sh
 fi
-fi
