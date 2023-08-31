@@ -12,8 +12,8 @@ Choose: " choice
 
 choice2=$(echo "$choice" | tr -d ' ')
 
-if [ "$choice2" == "1" ]; then
+if [ $choice2 == "1" ]; then
     echo "kir"
     ./configft.sh
-elif [ "$choice2" == "2" ]; then
+elif [ $choice2 == "2" ]; then
     ./config2.sh
