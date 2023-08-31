@@ -11,7 +11,7 @@ Non First time config [2]
 Choose: " choice
 
 choice2=$(echo "$choice" | tr -d ' ')
-
+echo $choice2
 if [ $choice2 == "1" ]; then
     echo "kir"
     ./configft.sh
