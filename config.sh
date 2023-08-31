@@ -9,9 +9,10 @@ sudo chmod +x configft.sh
 read -p '''First time config [1]
 Non First time config [2]
 Choose: ''' choice
+choice2= "${choice// /}"
 
-if [ "$choice" == "1" ]; then
+if [ "$choice2 == "1" ]; then
     echo "kir"
     ./configft.sh
-elif [ "$choice" == "2" ]; then
+elif [ "$choice2" == "2" ]; then
     ./config2.sh
