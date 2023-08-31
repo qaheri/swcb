@@ -11,6 +11,6 @@ Non First time config [2]
 Choose: ''' choice
 echo $choice
 if [ "$choice" == "1" ]; then
-    bash configft.sh
+    bash /root/axelbot/configft.sh
 elif [ "$choice" == "2" ]; then
-    bash config2.sh
+    bash /root/axelbot/config2.sh
