@@ -7,7 +7,8 @@ sudo chmod +x config2.sh
 sudo chmod +x configft.sh
 
 echo "First time config [1]
-Non First time config [2]"
+Non First time config [2]
+Choose: "
 read choice
 
 if [ "$choice" == "1" ]; then
