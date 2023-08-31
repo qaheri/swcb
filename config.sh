@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /root/
 rm -r axelbot
 git clone https://github.com/qaheri/axelbot
@@ -16,3 +17,4 @@ if [ $choice2 == "1" ]; then
     bash /root/axelbot/configft.sh
 elif [ $choice2 == "2" ]; then
     bash /root/axelbot/config2.sh
+fi
