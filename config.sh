@@ -1,4 +1,5 @@
 cd /root/
+rm -r axelbot
 git clone https://github.com/qaheri/axelbot
 git config --global credential.helper store
 cd axelbot
