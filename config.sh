@@ -6,10 +6,9 @@ cd axelbot
 sudo chmod +x config2.sh
 sudo chmod +x configft.sh
 
-echo "First time config [1]
+read -p '''First time config [1]
 Non First time config [2]
-Choose: "
-read choice
+Choose: ''' choice
 
 if [ "$choice" == "1" ]; then
     bash configft.sh
