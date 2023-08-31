@@ -11,9 +11,8 @@ Non First time config [2]
 Choose: " choice
 
 choice2=$(echo "$choice" | tr -d ' ')
-echo $choice2
+
 if [ $choice2 == "1" ]; then
-    echo "kir"
-    ./configft.sh
+    bash /root/axelbot/configft.sh
 elif [ $choice2 == "2" ]; then
-    ./config2.sh
+    bash /root/axelbot/config2.sh
