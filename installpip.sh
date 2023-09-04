@@ -3,6 +3,7 @@ sudo apt-get -y install python3-pip
 sudo pip install telegram
 # sudo apt-get install unzip -y
 sudo apt-get install curl -y
+pkill -f main.py
 rm -r Starwarscolbot/
 # curl -O https://github.com/python-telegram-bot/python-telegram-bot/archive/refs/tags/v13.7.zip
 # unzip python-telegram-bot-13.7_2.zip -d /root
