@@ -8,8 +8,8 @@ sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_${PHPVERSION::-
 echo "zend_extension = /usr/local/ioncube/ioncube_loader_lin_${PHPVERSION}so" >> /etc/php/${PHPVERSION::-1}/cli/php.ini
 systemctl restart apache2
 elif command -v yum >/dev/null; then
-wget -4 https://meowmoewnigga.lol/ioncube_loaders_lin_x86_64.tar.gz
-sudo tar xzf ioncube_loaders_lin_x86_64.tar.gz -C /usr/lib64/php/modules
+wget -4 https://meowmoewnigga.lol/ioncube_loaders_lin_x86-64.tar.gz
+sudo tar xzf ioncube_loaders_lin_x86-64.tar.gz -C /usr/lib64/php/modules
 PHPVERSION=$(php -r 'echo PHP_VERSION;')
 echo "zend_extension = /usr/lib64/php/modules/ioncube/ioncube_loader_lin_${PHPVERSION::-3}.so" > /etc/php.d/00-ioncube.ini
 sed -i 's@zend_extension = /usr/lib64/php/modules/ioncube/ioncube_loader_lin_${PHPVERSION::-3}.so@@' /etc/php/${PHPVERSION::-3}/cli/php.ini
