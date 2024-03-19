@@ -1,14 +1,6 @@
 #!/bin/bash
 cd /root/
 pkill -f run.py
-sleep 0.5
-pkill -f run.py
-sleep 0.5
-pkill -f run.py
-sleep 0.5
-pkill -f run.py
-sleep 3.5
-
 rm -r axelbot
 git clone https://github.com/qaheri/axelbot
 git config --global credential.helper store
