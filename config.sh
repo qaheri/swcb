@@ -2,7 +2,7 @@
 cd /root/
 pkill -9 -f run.py
 rm -r axelbot
-git clone https://github.com/qaheri/axelbot --no-checkout .git
+git clone https://github.com/qaheri/axelbot
 git config --global credential.helper store
 cd /root/axelbot
 sudo chmod +x config2.sh
