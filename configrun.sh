@@ -8,4 +8,4 @@ cd /root/axelbot
 sudo chmod +x config2.sh
 sudo chmod +x configft.sh
 
-bash /root/axelbot/config2.sh
+python3 run.py
