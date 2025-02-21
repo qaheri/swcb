@@ -58,3 +58,4 @@ if [[ "$AUTH_METHOD" == "none" ]]; then
 else
     echo "Dante SOCKS5 Proxy is running on port $PORT with user '$USERNAME'."
 fi
+sudo ss -tulnp | grep danted
