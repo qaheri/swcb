@@ -7,6 +7,7 @@ echo ""
 
 PORT=1080
 INTERFACE=$(ip -o -4 route show default | awk '{print $5}')
+IP=$(hostname -I | awk '{print $1}')
 
 if ! command -v danted &> /dev/null; then
     sudo apt update
@@ -59,3 +60,4 @@ else
     echo "Dante SOCKS5 Proxy is running on port $PORT with user '$USERNAME'."
 fi
 sudo ss -tulnp | grep danted
+echo curl --proxy socks5h://$IP:$PORT -I https://samad.aut.ac.ir
