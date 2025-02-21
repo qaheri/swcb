@@ -47,17 +47,17 @@ EOF
 
 eval "$USER_CONFIG"
 
-sudo systemctl restart danted
 sudo systemctl enable danted
+sudo systemctl restart danted
 
-sudo ufw allow $PORT/tcp
-sudo ufw allow $PORT/udp
-sudo ufw reload
+# sudo ufw allow $PORT/tcp
+# sudo ufw allow $PORT/udp
+# sudo ufw reload
 
-if [[ "$AUTH_METHOD" == "none" ]]; then
-    echo "Dante SOCKS5 Proxy is running on port $PORT with no authentication."
-else
-    echo "Dante SOCKS5 Proxy is running on port $PORT with user '$USERNAME'."
-fi
+# if [[ "$AUTH_METHOD" == "none" ]]; then
+#     echo "Dante SOCKS5 Proxy is running on port $PORT with no authentication."
+# else
+#     echo "Dante SOCKS5 Proxy is running on port $PORT with user '$USERNAME'."
+# fi
 sudo ss -tulnp | grep danted
 echo curl --proxy socks5h://$IP:$PORT -I https://samad.aut.ac.ir
