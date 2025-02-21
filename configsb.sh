@@ -6,7 +6,7 @@ mv /root/VIPChannelSUB /root/releases/VIPChannelSUB_$datee
 git clone https://github.com/qaheri/VIPChannelSUB
 git config --global credential.helper store
 cd /root/VIPChannelSUB
-sudo chmod +x config2.sh
+sudo chmod +x config.sh
 sudo chmod +x configft.sh
 
 read -p "First time config [1]
