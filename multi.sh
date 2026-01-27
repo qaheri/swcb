@@ -18,9 +18,10 @@ sudo chmod a+rx /usr/local/bin/shahancheck
 
 
 ipv4=$(curl -s ipv4.icanhazip.com)
-# echo -e "\nPlease Input Panel IP/Domain That Has License."
-# read panelip
-$panelip = 'en.axelinh.xyz'
+echo -e "\nPlease Input Panel IP/Domain That Has License."
+read panelip
+echo -e $panelip
+# $panelip = 'en.axelinh.xyz'
 
 echo -e "\nPlease Input Token Added In Main Panel."
 read token
