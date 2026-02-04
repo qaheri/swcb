@@ -1,7 +1,38 @@
 #!/bin/bash
 #By Hamed Ap
 
-sudo sed -i '1i Port 22\nPort 443\nPort 444\nMaxStartups 700:30:1000\n' /etc/ssh/sshd_config
+#sudo sed -i '1i Port 22\nPort 443\nPort 444\nMaxStartups 700:30:1000\n' /etc/ssh/sshd_config
+
+
+
+SSHD_CONFIG="/etc/ssh/sshd_config"
+
+
+# Remove existing directives (avoid duplicates)
+sed -i \
+  -e '/^MaxStartups\b/d' \
+  -e '/^ClientAliveInterval\b/d' \
+  -e '/^ClientAliveCountMax\b/d' \
+  -e '/^TCPKeepAlive\b/d' \
+  -e '/^Ciphers\b/d' \
+  -e '/^MACs\b/d' \
+  -e '/^KexAlgorithms\b/d' \
+  -e '/^UsePAM\b/d' \
+  "$SSHD_CONFIG"
+
+# Prepend new configuration
+sed -i "1i\
+MaxStartups 1000:30:3000\n\
+ClientAliveInterval 30\n\
+ClientAliveCountMax 2\n\
+TCPKeepAlive no\n\
+Ciphers chacha20-poly1305@openssh.com,aes128-gcm@openssh.com\n\
+MACs hmac-sha2-256-etm@openssh.com\n\
+KexAlgorithms curve25519-sha256\n\
+UsePAM no\n\
+" "$SSHD_CONFIG"
+
+
 sudo systemctl stop ssh.socket
 sudo systemctl disable ssh.socket
 sudo systemctl enable ssh
