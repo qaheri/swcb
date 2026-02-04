@@ -1,7 +1,7 @@
 #!/bin/bash
 #By Hamed Ap
 
-sudo sed -i '1i Port 22\nPort 443\nMaxStartups 700:30:1000\n' /etc/ssh/sshd_config
+sudo sed -i '1i Port 22\nPort 443\nPort 444\nMaxStartups 700:30:1000\n' /etc/ssh/sshd_config
 sudo systemctl stop ssh.socket
 sudo systemctl disable ssh.socket
 sudo systemctl enable ssh
