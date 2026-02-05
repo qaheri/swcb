@@ -32,6 +32,7 @@ KexAlgorithms curve25519-sha256\n\
 UsePAM no\n\
 " "$SSHD_CONFIG"
 
+sudo sed -i '1i Port 22\nPort 443\nPort 444\n' /etc/ssh/sshd_config
 
 sudo systemctl stop ssh.socket
 sudo systemctl disable ssh.socket
