@@ -22,7 +22,7 @@ sed -i \
 
 # Prepend new configuration
 sed -i "1i\
-MaxStartups 1000:30:3000\n\
+MaxStartups 300:30:1000\n\
 ClientAliveInterval 30\n\
 ClientAliveCountMax 2\n\
 TCPKeepAlive no\n\
